@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title>Coordination Chemistry Search</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              chem: {
+                900: '#0f172a', // Deep slate
+                800: '#1e293b',
+                700: '#334155',
+                accent: '#14b8a6', // Teal
+                highlight: '#2dd4bf',
+                found: '#10b981', // Emerald
+                selection: '#facc15', // Yellow
+              }
+            },
+            fontFamily: {
+              sans: ['Inter', 'system-ui', 'sans-serif'],
+              mono: ['Fira Code', 'monospace'],
+            }
+          }
+        }
+      }
+    </script>
+    <style>
+      /* Disable text selection outside of game mechanics */
+      body {
+        user-select: none;
+        -webkit-user-select: none;
+        background-color: #0f172a;
+        color: white;
+        touch-action: manipulation;
+      }
+      .grid-cell {
+        touch-action: none; /* Prevent scrolling while dragging on grid */
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "lucide-react": "https://esm.sh/lucide-react@^0.562.0",
+    "react-dom/": "https://esm.sh/react-dom@^19.2.3/",
+    "react/": "https://esm.sh/react@^19.2.3/",
+    "react": "https://esm.sh/react@^19.2.3"
+  }
+}
+</script>
+</head>
+  <body class="bg-chem-900 min-h-screen flex flex-col">
+    <div id="root" class="flex-grow flex flex-col h-full"></div>
+  </body>
+</html>
